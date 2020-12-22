@@ -21,7 +21,7 @@ public class Sorts{
           int min = data[i];
           for (int j = 0; j < data.length-1;j++) {
               if (min > data[j]) {
-                min = data[j]
+                min = data[j];
                 data[j] = data[i];
                 data[i] = min;
             }
