@@ -18,31 +18,31 @@ public class Sorts{
 
   public static void selectionSort(int[] data){
       for (int i = 0; i < data.length-1; i++) {
-          int min = data[i];
-          for (int j = 0; j < data.length-1;j++) {
-              if (min > data[j]) {
-                min = data[j];
-                data[j] = data[i];
-                data[i] = min;
+          int currentMinimum = data[i];
+          int currentMinimumIndex = i;
+          for (int j = i+1; j < data.length;j++) {
+              if (currentMinimum > data[j]) {
+                currentMinimum = data[j];
+                currentMinimumIndex = j;
             }
           }
+          data[currentMinimumIndex] = data[i];
+          data[i] = currentMinimum;
       }
   }
 
   public static void insertionSort(int[] data) {
       for (int i = 1; i < data.length; i++) {
-          int front = data[i];
-          int back = i-1;
+          int currentValue = data[i];
+          int backIndex = i-1;
 
-          while (back >= 0 && data[back] > front) {
-              data[back+1] = data[back];
-              back--;
+          while (backIndex >= 0 && data[backIndex] > currentValue) {
+              data[backIndex+1] = data[backIndex];
+              backIndex--;
           }
-          data[back+1] =data[i];
-
+          data[back+1] = data[i];
       }
   }
-
 
 
 
