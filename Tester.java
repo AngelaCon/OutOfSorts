@@ -6,11 +6,6 @@ public class Tester{
         int testAmt = 100;
         String finalMessage = "found failed cases";
         System.out.println("Testing Insertion");
-        int[] arr1 = new int[4];
-        arr1[0] = 3;
-        arr1[1] = 5;
-        arr1[2] = 2;
-        arr1[3] = 1;
         Sorts.insertionSort(arr1);
         System.out.println(Arrays.toString(arr1));
         for(int i = 0; i < testAmt; i++){

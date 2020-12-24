@@ -33,14 +33,14 @@ public class Sorts{
 
   public static void insertionSort(int[] data) {
       for (int i = 1; i < data.length; i++) {
-          int currentValue = data[i];
           int backIndex = i-1;
-
+          int currentValue = data[i];
+          
           while (backIndex >= 0 && data[backIndex] > currentValue) {
               data[backIndex+1] = data[backIndex];
               backIndex--;
           }
-          data[back+1] = data[i];
+          data[backIndex+1] = currentValue;
       }
   }
 
