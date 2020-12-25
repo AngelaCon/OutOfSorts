@@ -10,12 +10,41 @@ public class Driver{
 
 
       int[] randData = new int[Integer.parseInt(args[0])];
-      for(int i = 0 ; i < randData.length; i++){
-      randData[i] =(int)(Math.random()*10000);
-    }
+
 
       System.out.println();
 
+      if(args.length < 3 || args[2].equals("random")){
+       Random randElement = new Random();
+       for(int i = 0; i < randData.length; i++){
+           randData[i] = randElement.nextInt();
+       }
+     }else if(args[2].equals("equal")){
+       Random randElement = new Random();
+       int num = randElement.nextInt();
+       for(int i = 0; i < randData.length; i++){
+           randData[i] = num;
+       }
+     }else if(args[2].equals("sorted")){
+       Random randElement = new Random();
+       for(int i = 0; i < randData.length; i++){
+           randData[i] = randElement.nextInt();
+       }
+       Arrays.sort(randData);
+     }else if(args[2].equals("reversed")){
+       Random randElement = new Random();
+       for(int i = 0; i < randData.length; i++){
+           randData[i] = randElement.nextInt();
+       }
+       Arrays.sort(randData);
+       for(int i = 0; i < randData.length; i++){
+           randData[i] = randData[i] *(-1);
+       }
+       Arrays.sort(randData);
+       for(int i = 0; i < randData.length; i++){
+           randData[i] = randData[i] *(-1);
+       }
+     }
 
       if(args[1].equals("bubble")){
         Sorts.bubbleSort(randData);
