@@ -11,7 +11,6 @@ public class Driver{
 
       int[] randData = new int[Integer.parseInt(args[0])];
 
-
       System.out.println();
 
       if(args.length < 3 || args[2].equals("random")){

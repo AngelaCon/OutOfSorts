@@ -51,6 +51,8 @@ public class Tester{
         }
     }
 
+    //i reused my friend Steven's tester from past hws and changed some variables
+
 
 
 }
