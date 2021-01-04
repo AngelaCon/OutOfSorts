@@ -6,8 +6,6 @@ public class Tester{
         int testAmt = 100;
         String finalMessage = "found failed cases";
         System.out.println("Testing Insertion");
-        Sorts.insertionSort(arr1);
-        System.out.println(Arrays.toString(arr1));
         for(int i = 0; i < testAmt; i++){
             Random seed = new Random(); // set the seed for element so we can trace it back if neceessary
             Random arrSize = new Random();
